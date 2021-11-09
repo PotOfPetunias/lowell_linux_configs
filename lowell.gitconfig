@@ -1,0 +1,14 @@
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%Cgreen(%cr)%Creset %s %C(bold blue)<%an> %Cgreen%d' --abbrev-commit
+	sl = stash list
+	s = status
+	ba = branch -a
+	l1 = log -1 HEAD
+	l2 = log -2 HEAD
+	l3 = log -3 HEAD
+	l4 = log -4 HEAD
+	url = "!f() { git config --get remote.\"$1\".url; }; f"
+[user]
+	name = Lowell Crook
+[core]
+	autocrlf = true
