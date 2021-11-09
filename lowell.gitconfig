@@ -10,5 +10,6 @@
 	url = "!f() { git config --get remote.\"$1\".url; }; f"
 [user]
 	name = Lowell Crook
+	email = lhcrook@gmail.com
 [core]
 	autocrlf = true
