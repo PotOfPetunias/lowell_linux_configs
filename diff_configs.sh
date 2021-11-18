@@ -1,32 +1,46 @@
-echo "********* diff current and backups *********"
-if [ -f backup.bash_aliases ]; then
-	diff ~/.bash_aliases backup.bash_aliases
-else
-	echo "No backup of .bash_aliases!"
+if [ -z "$1" ]
+then
+	echo "Need two names of what to diff! (Include the name up to but not including the \".\")"
+	exit 1
 fi
-if [ -f backup.gitconfig ]; then
-	diff ~/.gitconfig    backup.gitconfig
-else
-	echo "No backup of .gitconfig!"
+
+if [ -z "$2" ]
+then
+	echo "Need two names of what to diff! (Include the name up to but not including the \".\")"
+	exit 1
 fi
-if [ -f backup.vimrc ]; then
-	diff ~/.vimrc        backup.vimrc
+
+echo " **** Diff bash_aliases **** "
+if [ -f $1.bash_aliases ]; then
+	if [ -f $2.bash_aliases ]; then
+		diff $1.bash_aliases $2.bash_aliases
+	else
+		echo "No file named $2.bash_aliases!"
+	fi
 else
-	echo "No backup of .vimrc!"
+	echo "No file named $1.bash_aliases!"
 fi
-echo "********* diff current and lowell's *********"
-if [ -f backup.bash_aliases ]; then
-	diff ~/.bash_aliases lowell.bash_aliases
+
+echo " **** Diff gitconfig **** "
+if [ -f $1.gitconfig ]; then
+	if [ -f $2.gitconfig ]; then
+		diff $1.gitconfig $2.gitconfig
+	else
+		echo "No file named $2.gitconfig!"
+	fi
 else
-	echo "No backup of .bash_aliases!"
+	echo "No file named $1.gitconfig!"
 fi
-if [ -f backup.gitconfig ]; then
-	diff ~/.gitconfig    lowell.gitconfig
+
+echo " **** Diff vimrc **** "
+if [ -f $1.vimrc ]; then
+	if [ -f $2.vimrc ]; then
+		diff $1.vimrc $2.vimrc
+	else
+		echo "No file named $2.vimrc!"
+	fi
 else
-	echo "No backup of .gitconfig!"
+	echo "No file named $1.vimrc!"
 fi
-if [ -f backup.vimrc ]; then
-	diff ~/.vimrc        lowell.vimrc
-else
-	echo "No backup of .vimrc!"
-fi
+
+

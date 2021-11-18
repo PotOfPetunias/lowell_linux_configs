@@ -1,3 +1,5 @@
 backup.bash_aliases
 backup.gitconfig
 backup.vimrc
+backups/*
+*.swp
