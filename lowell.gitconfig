@@ -2,6 +2,8 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%Cgreen(%cr)%Creset %s %C(bold blue)<%an> %Cgreen%d' --abbrev-commit
 	sl = stash list
 	s = status
+	d = diff
+	ds = diff --staged
 	ba = branch -a
 	l1 = log -1 HEAD
 	l2 = log -2 HEAD

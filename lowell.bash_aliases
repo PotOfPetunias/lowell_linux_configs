@@ -13,3 +13,4 @@ alias lls='ls -Slh'
 alias llt='ls -tlh'
 alias du='du -shc *'
 alias f='find . -name'
+alias xo="xdg-open"
