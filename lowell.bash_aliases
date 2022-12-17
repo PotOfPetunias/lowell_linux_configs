@@ -14,3 +14,7 @@ alias llt='ls -tlh'
 alias du='du -shc *'
 alias f='find . -name'
 alias xo="xdg-open"
+
+# Make the color of "other-writeable" directories and files more similar to normal directories
+# This often happens when reading old Windows hard drives
+LS_COLORS="$LS_COLORS:ow=01;34"
